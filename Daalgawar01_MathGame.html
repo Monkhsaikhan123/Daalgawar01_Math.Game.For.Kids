@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            background-color:pink;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            width:50%;
+            height:40%;
+            background-color:brown;
+            position:relative;
+        }
+        .number{
+            width:120px;
+            height:120px;
+            background-color:white;
+            border:1px solid blue;
+            font-size:40px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .number1{
+            position:absolute;
+            top:30%;
+            left:10%;
+        }
+        .number2{
+            position:absolute;
+            top:30%;
+            left:38%;
+        }
+        input{
+            position:absolute;
+            top:30%;
+            left:65%;
+            height:120px;
+            width:120px;
+            font-size:50px;
+        }
+        .nemeh{
+            font-size:50px;
+            position:absolute;
+            top:40%;
+            left:32%;
+        }
+        .tsentsuu{
+            font-size:50px;
+            position: absolute;
+            top:40%;
+            left:59%;
+        }
+        button{
+            position:absolute;
+            top:80%;
+            right:45%;
+            font-size:40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <input class="number number1" id="number1"></input>
+            <div class="nemeh">+</div>
+            <input class="number number2" id="number2"></input>
+            <div class="tsentsuu">=</div>
+            <input class="number answer" id="answer" type="Number">
+            <button class="check-btn" onclick="check()">Check</button>
+        </div>
+    </div>
+
+    <script>
+        number1.value = Math.floor(Math.random()* 10 + 1);
+        number2.value = Math.floor(Math.random()* 10 + 1);
+        check=function(){
+            alert("Your answer:" + 
+            answer.value +
+            "\nCorrect answer:" + 
+            (Number(number1.value) + Number(number2.value))
+
+            );
+            answer.value = "";
+            number1.value = Math.floor(Math.random()* 10 + 1);
+            number2.value = Math.floor(Math.random()* 10 + 1);
+        };
+        
+
+
+    </script>
+</body>
+</html>
